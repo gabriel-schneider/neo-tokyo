@@ -13,7 +13,8 @@
         "bed00189-a4f6-4b9d-9b8b-e023da7c146c",
         "76c0f501-7f1a-404c-b468-735770757b95",
         "13f9bb83-9b63-44e0-8d9e-835ba57b1227",
-        "12975591-ad83-4229-af6a-b657bbccf45a"
+        "12975591-ad83-4229-af6a-b657bbccf45a",
+        "91edd390-53eb-4d98-8645-73f51c863b5a"
     ],
     "filterType": "GMSprite",
     "folderName": "sprites",

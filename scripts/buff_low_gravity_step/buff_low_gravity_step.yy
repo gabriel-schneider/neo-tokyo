@@ -1,8 +1,8 @@
 {
-    "id": "eca5cca2-adf9-4655-884e-f3e2bc9d480f",
+    "id": "32a08a55-acd2-4c04-b97e-bb64e0aa734d",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "player_calculate_max_speed",
+    "name": "buff_low_gravity_step",
     "IsCompatibility": false,
     "IsDnD": false
 }

@@ -11,7 +11,7 @@ if player_get_state() == argument0
 switch (argument0)
 {
 	case player_state.normal: {
-		audio_group_set_gain(ag_generic_footstep, 0.1, 100)
+		audio_group_set_gain(ag_generic_footstep, 0.5, 100)
 		with (obj_player)
 		{
 			mask_index = spr_player	
@@ -19,7 +19,7 @@ switch (argument0)
 		break
 	}
 	case player_state.crouch: {
-		audio_group_set_gain(ag_generic_footstep, 0.05, 100)
+		audio_group_set_gain(ag_generic_footstep, 0.25, 100)
 		with (obj_player)
 		{
 			mask_index = spr_player_crouch

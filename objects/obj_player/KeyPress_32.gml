@@ -1,0 +1,1 @@
+status_effect_add(id, "low_gravity")

@@ -1,8 +1,8 @@
 {
-    "id": "eca5cca2-adf9-4655-884e-f3e2bc9d480f",
+    "id": "db33b559-dd3c-420b-b844-37a7c16d0168",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "player_calculate_max_speed",
+    "name": "player_get_max_speed",
     "IsCompatibility": false,
     "IsDnD": false
 }

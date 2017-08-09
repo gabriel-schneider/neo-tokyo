@@ -1,0 +1,8 @@
+{
+	"low_gravity": {
+		"start": "buff_low_gravity_start",
+		"end": "buff_low_gravity_end",
+		"step": "buff_low_gravity_step",
+		"duration": 120
+	}
+}

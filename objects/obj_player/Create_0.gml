@@ -1,5 +1,4 @@
-collision_tilemap = layer_tilemap_get_id(layer_get_id("Collision"))
-
+event_inherited()
 _hspeed		= 0
 _vspeed		= 0
 _gravity	= global.world_gravity
@@ -13,11 +12,12 @@ crouch_speed_reduction = 1
 
 state_on_floor = false
 state = player_state.normal
+
 enum player_state {
 	normal, crouch, jump	
 }
 
-
+//footstep_init()
 footstep_count = 0
 footstep_index = 0
 footstep_list = ds_list_create()
