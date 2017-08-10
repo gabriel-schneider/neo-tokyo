@@ -1,8 +1,22 @@
 {
-	"low_gravity": {
-		"start": "buff_low_gravity_start",
-		"end": "buff_low_gravity_end",
-		"step": "buff_low_gravity_step",
-		"duration": 120
+	"speed": {
+		"start": "buff_speed_start",
+		"end": "buff_speed_end",
+		"step": "buff_speed_step",
+		"duration": 120,
+		"is_unique": true
+	},
+	"dash": {
+		"start": "buff_dash_start",
+		"end": "buff_dash_end",
+		"step": "buff_speed_step",
+		"duration": 20,
+		"is_unique": true
+	},
+	"roll": {
+		"start": "buff_roll_start",
+		"end": "buff_roll_end",
+		"duration": 30,
+		"is_unique": true
 	}
 }

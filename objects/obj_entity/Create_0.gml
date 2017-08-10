@@ -1,1 +1,2 @@
-status_effect_setup()
+modifiers = ds_list_create()
+controllable = true

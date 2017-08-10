@@ -1,0 +1,1 @@
+argument0.max_speed += 0.5

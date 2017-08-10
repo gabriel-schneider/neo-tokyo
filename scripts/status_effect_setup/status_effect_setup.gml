@@ -1,1 +1,0 @@
-effect_list = ds_list_create()

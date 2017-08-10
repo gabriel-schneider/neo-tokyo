@@ -1,0 +1,1 @@
+argument0.max_speed = global.player_base_speed_max

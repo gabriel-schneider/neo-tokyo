@@ -1,7 +1,11 @@
 
 
 _hspeed += sign(_hspeed)*-_friction
-_hspeed += (keyboard_check(global.control_move_right) - keyboard_check(global.control_move_left))*acceleration
+
+if (controllable)
+{
+	_hspeed += (keyboard_check(global.control_move_right) - keyboard_check(global.control_move_left))*acceleration
+}
 
 var ms = player_calculate_max_speed(max_speed)
 
@@ -78,17 +82,6 @@ if (place_meeting(x, y + _vspeed, obj_solid))
 			y += sign(_vspeed)*-0.1
 		}
 		_vspeed = 0
-		//var yy = 0
-		//while (true)
-		//{
-		//	if place_meeting(x, y + yy + sign(_vspeed)*0.1, obj_solid)
-		//	{				
-		//		break;
-		//	}
-		//	yy += sign(_vspeed)*0.1
-		//}
-		//y += yy
-		//_vspeed = 0
 	}
 }
 
@@ -119,7 +112,7 @@ if (!state_on_floor)
 		player_set_state(player_state.normal)
 	}
 	
-	if keyboard_check_pressed(global.control_jump)
+	if (keyboard_check_pressed(global.control_jump) && controllable)
 	{
 		if !place_meeting(x, y - 16, obj_solid) 
 		{
@@ -150,18 +143,3 @@ if keyboard_check_pressed(global.control_crouch) && state_on_floor
 	}
 }
 
-// Update status effect duration
-for (var i=0; i<ds_list_size(effect_list); i+=1)
-{
-	var e = effect_list[| i]
-	var time = e[? "duration"]
-	time -= 1
-	if (time <= 0)
-	{
-		script_execute(e[? "end"], id)
-		ds_list_delete(effect_list, i)
-		i -= 1
-	}	
-	script_execute(e[? "step"], id)
-	e[? "duration"] = time
-};

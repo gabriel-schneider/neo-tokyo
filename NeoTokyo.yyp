@@ -58,7 +58,7 @@
             "Key": "056f3fae-304c-4f38-beb2-406cfd95dfdd",
             "Value": {
                 "id": "40723c72-051c-42a6-ab7d-1793b801f84b",
-                "resourcePath": "scripts\\status_effect_add\\status_effect_add.yy",
+                "resourcePath": "scripts\\modifier_apply\\modifier_apply.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -74,7 +74,7 @@
             "Key": "06d66542-2bb7-41ee-b254-942bfaac6823",
             "Value": {
                 "id": "b6851b8c-851b-42ae-ba3a-6014671e3ebc",
-                "resourcePath": "scripts\\buff_low_gravity_start\\buff_low_gravity_start.yy",
+                "resourcePath": "scripts\\buff_speed_start\\buff_speed_start.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -114,7 +114,7 @@
             "Key": "13e8b5a1-75ff-4ccd-ba83-76e223dce530",
             "Value": {
                 "id": "9a52fd1f-d2a9-4012-8d9b-6a627fc1f826",
-                "resourcePath": "scripts\\buff_low_gravity_end\\buff_low_gravity_end.yy",
+                "resourcePath": "scripts\\buff_speed_end\\buff_speed_end.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -154,16 +154,16 @@
             "Key": "32a08a55-acd2-4c04-b97e-bb64e0aa734d",
             "Value": {
                 "id": "d4a96b88-e478-4a2f-9564-f544c706babd",
-                "resourcePath": "scripts\\buff_low_gravity_step\\buff_low_gravity_step.yy",
+                "resourcePath": "scripts\\buff_speed_step\\buff_speed_step.yy",
                 "resourceType": "GMScript"
             }
         },
         {
-            "Key": "349bfe7a-d2ce-404b-8bbe-b4d3cf5b65e3",
+            "Key": "346e307c-55ec-4b85-85a1-eea48832b84d",
             "Value": {
-                "id": "cf8feeb7-0410-4f57-9d84-2e6c09b8cb51",
-                "resourcePath": "scripts\\status_effect_update\\status_effect_update.yy",
-                "resourceType": "GMScript"
+                "id": "861bf679-bfab-439a-8ae8-b0fb70e88ba6",
+                "resourcePath": "views\\346e307c-55ec-4b85-85a1-eea48832b84d.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -172,6 +172,14 @@
                 "id": "4c418784-dd88-45f1-8bdb-8ec595b426b0",
                 "resourcePath": "datafiles_yy\\status_effect_database.json.yy",
                 "resourceType": "GMIncludedFile"
+            }
+        },
+        {
+            "Key": "4a7ea9e2-d71e-428a-ba20-90084483a7ec",
+            "Value": {
+                "id": "68d9498b-5bf1-4d9f-b37a-ddb1e0278ee7",
+                "resourcePath": "scripts\\buff_dash_end\\buff_dash_end.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -191,6 +199,14 @@
             }
         },
         {
+            "Key": "4fa11310-5687-44eb-a770-3579a1a44876",
+            "Value": {
+                "id": "c25fdf3d-f0f1-4f33-8233-79fc9c4e3a9f",
+                "resourcePath": "views\\4fa11310-5687-44eb-a770-3579a1a44876.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "50f9b32c-2513-469a-a35c-4c19a31def38",
             "Value": {
                 "id": "4cf29fd3-fb98-4118-b4ae-64f76cde6281",
@@ -204,6 +220,14 @@
                 "id": "0f312879-d6d7-4478-9184-78751c14e3d3",
                 "resourcePath": "sounds\\snd_generic_heels_5\\snd_generic_heels_5.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "5192a493-a9bd-4324-9709-73f4852f8710",
+            "Value": {
+                "id": "71a7d7ae-f9c3-4c20-b618-c0296eeae366",
+                "resourcePath": "scripts\\buff_roll_end\\buff_roll_end.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -311,6 +335,14 @@
             }
         },
         {
+            "Key": "88f92e12-7751-49bb-9c15-583f04c013ce",
+            "Value": {
+                "id": "5f93d323-5892-4364-88e5-3bc9b1851e49",
+                "resourcePath": "views\\88f92e12-7751-49bb-9c15-583f04c013ce.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "8bbe8be4-9b32-4c4c-9ef9-63b20e8087cf",
             "Value": {
                 "id": "7fdcf701-f730-4ef2-a0c7-cc2a815486ab",
@@ -399,6 +431,14 @@
             }
         },
         {
+            "Key": "b7d32c94-a23f-43d0-ac24-4f1c1ea44acc",
+            "Value": {
+                "id": "3e0056b4-6e5d-4036-a791-c8e4b46acdfa",
+                "resourcePath": "views\\b7d32c94-a23f-43d0-ac24-4f1c1ea44acc.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "bd814a82-7f09-4137-bc20-b4ab538e7901",
             "Value": {
                 "id": "4eb0d664-3d07-441d-9316-715867c42e27",
@@ -439,19 +479,19 @@
             }
         },
         {
-            "Key": "cb5747aa-9ee3-4b5b-b181-7c1973993242",
-            "Value": {
-                "id": "730c77bd-613a-4b79-b187-2f40c38e41e0",
-                "resourcePath": "scripts\\status_effect_setup\\status_effect_setup.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "cc98d028-7bdd-4680-85f3-c87a7baa481e",
             "Value": {
                 "id": "c4548765-5946-4877-b1c5-69c3cc7f6ec7",
                 "resourcePath": "options\\windows\\options_windows.yy",
                 "resourceType": "GMWindowsOptions"
+            }
+        },
+        {
+            "Key": "d193b2c8-0fda-4f22-abac-fd2134b4c837",
+            "Value": {
+                "id": "34bb5e95-a64e-4c9e-9fad-bb6dbc3e8c1e",
+                "resourcePath": "scripts\\buff_dash_start\\buff_dash_start.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -492,6 +532,14 @@
                 "id": "5854b1bd-2a0e-4ff5-a18f-661ca64a26b6",
                 "resourcePath": "views\\e0c31921-2634-4cbb-b07d-3af6b43671db.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "e1ec9757-6e65-49c8-ae72-66167895ff33",
+            "Value": {
+                "id": "4c3fb275-4a3e-4de8-98a5-c18b690f85ce",
+                "resourcePath": "scripts\\buff_roll_start\\buff_roll_start.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -551,13 +599,15 @@
         "8bbe8be4-9b32-4c4c-9ef9-63b20e8087cf",
         "db33b559-dd3c-420b-b844-37a7c16d0168",
         "92f43265-693d-474f-959a-d013566b5315",
-        "cb5747aa-9ee3-4b5b-b181-7c1973993242",
-        "bd814a82-7f09-4137-bc20-b4ab538e7901",
-        "056f3fae-304c-4f38-beb2-406cfd95dfdd",
         "06d66542-2bb7-41ee-b254-942bfaac6823",
         "13e8b5a1-75ff-4ccd-ba83-76e223dce530",
         "32a08a55-acd2-4c04-b97e-bb64e0aa734d",
-        "349bfe7a-d2ce-404b-8bbe-b4d3cf5b65e3"
+        "d193b2c8-0fda-4f22-abac-fd2134b4c837",
+        "4a7ea9e2-d71e-428a-ba20-90084483a7ec",
+        "e1ec9757-6e65-49c8-ae72-66167895ff33",
+        "5192a493-a9bd-4324-9709-73f4852f8710",
+        "bd814a82-7f09-4137-bc20-b4ab538e7901",
+        "056f3fae-304c-4f38-beb2-406cfd95dfdd"
     ],
     "tutorial": ""
 }

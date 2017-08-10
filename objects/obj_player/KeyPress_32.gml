@@ -1,1 +1,1 @@
-status_effect_add(id, "low_gravity")
+modifier_apply(id, "speed")
