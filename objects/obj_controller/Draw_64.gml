@@ -1,4 +1,4 @@
-draw_text(32, 32, "Player state: " + player_get_state_name(player_get_state()))
+draw_text(32, 32, "Player state: " + entity_get_state_name(entity_get_state(obj_player)))
 window_set_caption("FPS: " + string(fps_real))
 
 var modifiers = obj_player.modifiers

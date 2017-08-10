@@ -1,5 +1,5 @@
 
-if ((current_time mod 2) == 0)
+if ((current_time mod 3) != 0)
 {
 	exit
 }

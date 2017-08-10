@@ -1,8 +1,11 @@
-argument0.max_speed = global.player_base_speed_max
-argument0._friction = global.player_base_friction
+argument0.max_speed = entity_get_base(argument0, "max_speed")
+argument0._friction = entity_get_base(argument0, "friction")
 argument0.controllable = true
 
-if (argument0.object_index == obj_player)
+with (argument0)
 {
-	player_set_state(player_state.normal)
+	if !place_meeting(x, y - 16, obj_solid)
+	{
+		entity_set_state(argument0, entity_state.normal)		
+	}
 }

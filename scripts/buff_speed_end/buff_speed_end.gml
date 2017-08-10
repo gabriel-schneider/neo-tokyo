@@ -1,1 +1,1 @@
-argument0.max_speed = global.player_base_speed_max
+argument0.max_speed = entity_get_base(argument0, "max_speed")

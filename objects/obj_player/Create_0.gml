@@ -1,21 +1,20 @@
 event_inherited()
-_hspeed		= 0
-_vspeed		= 0
-_gravity	= global.world_gravity
-_friction	= global.player_base_friction
-_direction	= 1
 
-acceleration	= global.player_base_acc
-max_speed		= global.player_base_speed_max
-jump_force		= global.player_base_jump_force
-crouch_speed_reduction = 1
+entity_set_base(id, "friction", 0.15)
+entity_set_base(id, "max_speed", 2)
+entity_set_base(id, "acceleration", 1)
+entity_set_base(id, "jump_force", 5.6)
+
+acceleration	= entity_get_base(id, "acceleration")
+max_speed		= entity_get_base(id, "max_speed")
+jump_force		= entity_get_base(id, "jump_force")
 
 state_on_floor = false
-state = player_state.normal
 
-enum player_state {
-	normal, crouch, jump	
-}
+mask_normal = spr_player
+mask_crouch = spr_player_crouch
+
+entity_set_state(id, entity_state.normal)
 
 //footstep_init()
 footstep_count = 0

@@ -2,13 +2,6 @@
 
 var spd = argument0
 
-spd -= obj_player.crouch_speed_reduction*(player_get_state() == player_state.crouch)
-//with (obj_player)
-//{
-//	if (place_meeting(x, y + 1, obj_stair))
-//	{
-//		spd -= 0.75
-//	}
-//}
+spd -= obj_player.crouch_speed_reduction*(entity_get_state(obj_player) == entity_state.crouch)
 
 return max(0, spd)

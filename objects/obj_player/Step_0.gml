@@ -7,11 +7,11 @@ if (controllable)
 	_hspeed += (keyboard_check(global.control_move_right) - keyboard_check(global.control_move_left))*acceleration
 }
 
-var ms = player_calculate_max_speed(max_speed)
+//var ms = player_calculate_max_speed(max_speed)
 
-if (abs(_hspeed) > ms)
+if (abs(_hspeed) > max_speed)
 {
-	_hspeed = ms*sign(_hspeed)
+	_hspeed = max_speed*sign(_hspeed)
 }
 
 if (abs(_hspeed) < _friction)
@@ -103,23 +103,23 @@ state_on_floor = place_meeting(x, y + 1, obj_solid)
 if (!state_on_floor)
 {
 	_vspeed += _gravity
-	player_set_state(player_state.jump)
+	entity_set_state(id, entity_state.jump)
 } else
 {
-	if (player_get_state() == player_state.jump)
+	if (entity_get_state(id) == entity_state.jump)
 	{
 		player_hit_ground()
-		player_set_state(player_state.normal)
+		entity_set_state(id, entity_state.normal)
 	}
 	
 	if (keyboard_check_pressed(global.control_jump) && controllable)
 	{
 		if !place_meeting(x, y - 16, obj_solid) 
 		{
-			player_set_state(player_state.jump)
+			entity_set_state(id, entity_state.jump)
 		}
 		
-		if (player_get_state() != player_state.crouch)
+		if (entity_get_state(id) != entity_state.crouch)
 		{
 			_vspeed = -abs(jump_force)	
 		}
@@ -131,14 +131,14 @@ y += _vspeed
 
 if keyboard_check_pressed(global.control_crouch) && state_on_floor
 {
-	if (player_get_state() == player_state.normal)
+	if (entity_get_state(id) == entity_state.normal)
 	{
-		player_set_state(player_state.crouch)
+		entity_set_state(id, entity_state.crouch)
 	} else
 	{
 		if !place_meeting(x, y - 16, obj_solid)
 		{
-			player_set_state(player_state.normal)
+			entity_set_state(id, entity_state.normal)
 		}
 	}
 }

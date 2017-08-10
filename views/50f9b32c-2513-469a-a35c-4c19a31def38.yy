@@ -9,7 +9,7 @@
         "056f3fae-304c-4f38-beb2-406cfd95dfdd"
     ],
     "filterType": "GMScript",
-    "folderName": "StatusEffect",
+    "folderName": "Modifier",
     "isDefaultView": false,
     "localisedFolderName": ""
 }
