@@ -1,5 +1,4 @@
 draw_self()
-//draw_sprite_ext(mask_index, 0, x, y, 1, 1, 0, c_white, 0.5)
-draw_set_color(c_red)
+draw_set_color(c_yellow)
 draw_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, true)
 draw_set_color(c_white)

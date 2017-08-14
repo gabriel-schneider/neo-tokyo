@@ -11,6 +11,8 @@ _direction	= entity_direction.right
 
 modifiers = ds_list_create()
 controllable = true
+is_controllable = true
+is_moveable = true
 
 enum entity_direction {
 	right	= 1,

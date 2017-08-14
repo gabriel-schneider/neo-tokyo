@@ -3,7 +3,7 @@ event_inherited()
 entity_set_base(id, "friction", 0.15)
 entity_set_base(id, "max_speed", 2)
 entity_set_base(id, "acceleration", 1)
-entity_set_base(id, "jump_force", 5.6)
+entity_set_base(id, "jump_force", 6)
 
 acceleration	= entity_get_base(id, "acceleration")
 max_speed		= entity_get_base(id, "max_speed")

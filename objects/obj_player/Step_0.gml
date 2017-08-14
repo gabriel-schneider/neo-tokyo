@@ -7,7 +7,6 @@ if (controllable)
 	_hspeed += (keyboard_check(global.control_move_right) - keyboard_check(global.control_move_left))*acceleration
 }
 
-//var ms = player_calculate_max_speed(max_speed)
 
 if (abs(_hspeed) > max_speed)
 {
@@ -20,7 +19,8 @@ if (abs(_hspeed) < _friction)
 	image_speed = 0
 }
 
-if !place_meeting(x + _hspeed, y, obj_solid)
+	
+if (!place_meeting(x + _hspeed, y, obj_solid))
 {
 	x += _hspeed
 } else
@@ -73,33 +73,48 @@ if (_hspeed != 0)
 
 if (place_meeting(x, y + _vspeed, obj_solid))
 {	
-	if (!state_on_floor)
-	{
+	if (!state_on_floor && _vspeed != 0)
+	{	
 		y += _vspeed
 		y = floor(y)
 		while (place_meeting(x, y, obj_solid))
 		{
 			y += sign(_vspeed)*-0.1
-		}
+		}		
 		_vspeed = 0
 	}
 }
 
-if !place_meeting(x, y + 1, obj_solid)
-{
-	if (state_on_floor)
-	{
-		if (_vspeed >= 0)
-		{
-			if place_meeting(x, y + 9, obj_solid)
-			{
-				y += 8
-			}
-		}
-	}
-}
+// Used for going down stairs
+//if (!place_meeting(x, y + 1, obj_solid))
+//{
+//	if (state_on_floor)
+//	{
+//		if (_vspeed >= 0)
+//		{
+//			if place_meeting(x, y + 9, obj_solid)
+//			{
+//				y += 8
+//			}
+//		}
+//	}
+//}
 
+	
 state_on_floor = place_meeting(x, y + 1, obj_solid)
+
+var platform = instance_place(x, y + 4, obj_platform)
+if (platform)
+{
+	var xx = lengthdir_x(platform._speed, platform._direction)
+	var yy = lengthdir_y(platform._speed, platform._direction)		
+	x += xx
+	y = platform.bbox_top + yy - 1
+	_vspeed = 0
+	state_on_floor = true
+}
+	
+	
 if (!state_on_floor)
 {
 	_vspeed += _gravity
@@ -111,7 +126,8 @@ if (!state_on_floor)
 		player_hit_ground()
 		entity_set_state(id, entity_state.normal)
 	}
-	
+
+
 	if (keyboard_check_pressed(global.control_jump) && controllable)
 	{
 		if !place_meeting(x, y - 16, obj_solid) 
@@ -142,4 +158,5 @@ if keyboard_check_pressed(global.control_crouch) && state_on_floor
 		}
 	}
 }
+
 

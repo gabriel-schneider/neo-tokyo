@@ -199,6 +199,14 @@
             }
         },
         {
+            "Key": "4f92c057-9f35-4f72-9cc8-e3859715e894",
+            "Value": {
+                "id": "2d1e62d2-c746-4844-84e9-ede36d5555ec",
+                "resourcePath": "objects\\obj_platform\\obj_platform.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "4fa11310-5687-44eb-a770-3579a1a44876",
             "Value": {
                 "id": "c25fdf3d-f0f1-4f33-8233-79fc9c4e3a9f",
@@ -235,6 +243,14 @@
             "Value": {
                 "id": "3606d01e-134e-4bb6-bb3c-6f278ca5b590",
                 "resourcePath": "scripts\\entity_set_state\\entity_set_state.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "558d55e3-9d35-4d7b-8090-930f84a81b7b",
+            "Value": {
+                "id": "e99709c1-42e5-4d92-9b3f-0fee101a879b",
+                "resourcePath": "scripts\\entity_is_moveable\\entity_is_moveable.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -511,6 +527,14 @@
             }
         },
         {
+            "Key": "c8cefcf0-8867-4804-b47f-2bdc60ddec9b",
+            "Value": {
+                "id": "ab9ccce0-3f12-4f10-8067-4e7b1a7c66ce",
+                "resourcePath": "scripts\\entity_is_controllable\\entity_is_controllable.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "cc98d028-7bdd-4680-85f3-c87a7baa481e",
             "Value": {
                 "id": "c4548765-5946-4877-b1c5-69c3cc7f6ec7",
@@ -524,6 +548,14 @@
                 "id": "34bb5e95-a64e-4c9e-9fad-bb6dbc3e8c1e",
                 "resourcePath": "scripts\\buff_dash_start\\buff_dash_start.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "d2d4c891-3142-44df-8fd4-42b6852b4598",
+            "Value": {
+                "id": "19b7bc61-055d-4d76-8e52-284a38f7100d",
+                "resourcePath": "sprites\\spr_platform\\spr_platform.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -642,7 +674,9 @@
         "871a37da-fbc1-4435-acc2-1ba76e668050",
         "6319c938-4da5-4678-b72f-41400a4a502a",
         "aafa9405-41ee-4db2-9bec-6ed25b1d85cc",
-        "a37e7399-7c30-4f8e-bc03-145d7684407e"
+        "a37e7399-7c30-4f8e-bc03-145d7684407e",
+        "558d55e3-9d35-4d7b-8090-930f84a81b7b",
+        "c8cefcf0-8867-4804-b47f-2bdc60ddec9b"
     ],
     "tutorial": ""
 }
