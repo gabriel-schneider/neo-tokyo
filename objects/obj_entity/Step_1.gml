@@ -1,28 +1,9 @@
-
-// Apply modifier step event and update duration
-for (var i=0; i<ds_list_size(modifiers); i++)
+if (__ghosted)
 {
-	var modifier = modifiers[| i]
-	if modifier[? "duration_max"] > 0
+	if (!place_meeting(x, y, obj_entity))
 	{
-		var time = modifier[? "duration"]
-		time -= 1
-		if (time <= 0)
-		{
-			if (ds_map_exists(modifier, "end"))
-			{
-				script_execute(modifier[? "end"], id)
-			}
-			ds_list_delete(modifiers, i)
-			i --
-			continue
-		}
-		modifier[? "duration"] = time
-	}
-	
-	
-	if (ds_map_exists(modifier, "step"))
-	{		
-		script_execute(modifier[? "step"], id)
+		__ghosted = false
+		is_collidable = true
 	}
 }
+guider = entity_check_guider(id)

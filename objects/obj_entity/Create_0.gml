@@ -8,27 +8,24 @@ _vspeed		= 0
 _gravity	= global.world_gravity
 _friction	= entity_get_base(id, "friction")
 _direction	= entity_direction.right
+max_speed	= entity_get_base(id, "max_speed")
+acceleration	= entity_get_base(id, "acceleration")
 
+
+guider = noone
 modifiers = ds_list_create()
-controllable = true
+
 is_controllable = true
 is_moveable = true
+is_guideable = true
+is_collidable = true
+is_ghostable = false
 
 enum entity_direction {
 	right	= 1,
 	left	=  -1
 }
 
-enum entity_state {
-	normal, 
-	crouch, 
-	jump	
-}
+__previous = noone
+__ghosted = false
 
-state = entity_state.normal
-
-mask_normal = -1
-mask_crouch = -1
-
-state_speed_mod_crouch = -1
-state_speed_mod_jump = 0
