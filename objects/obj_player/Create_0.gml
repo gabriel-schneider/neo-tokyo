@@ -24,3 +24,4 @@ footstep_list = ds_list_create()
 ds_list_add(footstep_list, snd_generic_heels_1, snd_generic_heels_2, snd_generic_heels_3,
 			snd_generic_heels_4, snd_generic_heels_5, snd_generic_heels_6, snd_generic_heels_7,
 			snd_generic_heels_8)
+			

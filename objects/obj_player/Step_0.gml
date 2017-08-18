@@ -8,10 +8,10 @@ _direction = sign(_hspeed)
 	if (keyboard_check_pressed(vk_up))
 	{
 		_vspeed = -5.6
-		if (entity_has_guider(id))
-		{
-			_vspeed += lengthdir_y(guider._speed, guider._direction)
-		}
+		//if (entity_has_guider(id))
+		//{
+		//	_vspeed += lengthdir_y(guider._speed, guider._direction)
+		//}
 	}
 
 event_inherited()

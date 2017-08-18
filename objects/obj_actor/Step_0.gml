@@ -19,16 +19,17 @@ if (_hspeed != 0)
 	if (!entity_move(id, [_hspeed, 0]))
 	{
 		//@TODO: Check for stairs only
-		entity_move(id, [_hspeed, -8])
+		//entity_move(id, [_hspeed, -8])
 	}
 }
 
 on_floor = entity_on_floor(id, [obj_solid, obj_entity]) || (guider != noone)
 
-if (!on_floor || __ghosted == true)
+if (!on_floor)
 {
 	_vspeed += _gravity*(!entity_has_guider(id))
 }
+
 
 if (!entity_move(id, [0, _vspeed]))
 {

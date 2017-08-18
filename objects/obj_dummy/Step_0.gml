@@ -1,4 +1,3 @@
 event_inherited()
 
-
-_hspeed += acceleration*_direction
+//_hspeed += acceleration*_direction

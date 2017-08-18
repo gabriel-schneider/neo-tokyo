@@ -27,32 +27,31 @@ with (argument[0])
 			y += yy
 			return true
 		} else
-		{
+		{			
 			var found_collidable = false
 			for (var i = 0; i < ds_list_size(entity_list); i++)
 			{
 			    var entity = entity_list[| i]
-				if (entity.is_collidable && previous != entity)
+				if (entity.is_collidable)
 				{
 					found_collidable = true
-					__previous = entity
 					break				
 				}
 			};
 			
 			ds_list_destroy(entity_list)
 			
-			if (entity.__previous == id)
-			{
-				if (entity.is_ghostable && entity.is_collidable)
-				{
-					entity.__ghosted = true
-					entity.is_collidable = false
-				}
-				x += xx
-				y += yy
-				return true	
-			}
+			//if (entity.__previous == id)
+			//{
+			//	if (entity.is_ghostable && entity.is_collidable)
+			//	{
+			//		entity.__ghosted = true
+			//		entity.is_collidable = false
+			//	}
+			//	x += xx
+			//	y += yy
+			//	return true	
+			//}
 			
 			if (found_collidable)
 			{
@@ -61,7 +60,7 @@ with (argument[0])
 					if (entity_move(entity, [xx, yy], id, count + 1))
 					{
 						
-						entity._hspeed += xx
+						//entity._hspeed += xx
 						x += xx
 						y += yy
 						return true
@@ -69,7 +68,6 @@ with (argument[0])
 				}
 				return false
 			}
-			__previous = noone
 			x += xx
 			y += yy
 			return true

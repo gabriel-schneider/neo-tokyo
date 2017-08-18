@@ -1,1 +1,1 @@
-return (argument0.guider != noone)
+return (instance_exists(argument0.guider))
