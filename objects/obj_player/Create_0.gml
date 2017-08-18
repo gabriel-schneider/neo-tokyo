@@ -14,7 +14,8 @@ state_on_floor = false
 mask_normal = spr_player
 mask_crouch = spr_player_crouch
 
-is_moveable = false
+is_moveable = true
+move_priority = 10
 entity_set_state(id, actor_state.normal)
 
 //footstep_init()

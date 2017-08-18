@@ -17,12 +17,19 @@ if (argument_count >= 3)
 
 with (argument[0])
 {
+	if (previous)
+	{
+		if (previous.move_priority < move_priority)
+		{
+			return false
+		}		
+	}
+	
 	if (!place_meeting(x + xx, y + yy, obj_solid))
 	{
 		var entity_list = instance_place_list(x + xx, y + yy, obj_entity)
 		if (entity_list = noone)
 		{
-			__previous = noone
 			x += xx
 			y += yy
 			return true
@@ -60,7 +67,7 @@ with (argument[0])
 					if (entity_move(entity, [xx, yy], id, count + 1))
 					{
 						
-						//entity._hspeed += xx
+						entity._hspeed += xx
 						x += xx
 						y += yy
 						return true

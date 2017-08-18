@@ -1,11 +1,5 @@
 // Friction
-if (sign(_hspeed + sign(_hspeed)*-_friction) != sign(_hspeed))
-{
-	_hspeed = 0
-} else
-{
-	_hspeed += sign(_hspeed)*-_friction
-}
+_hspeed += sign(_hspeed)*-_friction
 
 if (abs(_hspeed) > max_speed)
 {
@@ -14,16 +8,24 @@ if (abs(_hspeed) > max_speed)
 	
 if (_hspeed != 0)
 {
+	if (abs(_hspeed) < _friction)
+	{
+		_hspeed = 0
+		image_speed = 0
+	}
+
 	image_xscale = _direction
 	image_speed = abs(_hspeed/max_speed)*1.25
 	if (!entity_move(id, [_hspeed, 0]))
 	{
-		//@TODO: Check for stairs only
-		//entity_move(id, [_hspeed, -8])
+		if (place_meeting(x + _hspeed, y, obj_stair))
+		{
+			entity_move(id, [_hspeed, -8])
+		}
 	}
 }
 
-on_floor = entity_on_floor(id, [obj_solid, obj_entity]) || (guider != noone)
+on_floor = entity_on_floor(id, [obj_solid, obj_entity]) || (entity_has_guider(id))
 
 if (!on_floor)
 {

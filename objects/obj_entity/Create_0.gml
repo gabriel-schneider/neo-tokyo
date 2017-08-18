@@ -21,6 +21,8 @@ is_guideable = true
 is_collidable = true
 is_ghostable = false
 
+move_priority = 0
+
 enum entity_direction {
 	right	= 1,
 	left	=  -1
