@@ -1,3 +1,5 @@
+entity_event_initialize()
+
 entity_set_base(id, "friction", 0.15)
 entity_set_base(id, "max_speed", 2)
 entity_set_base(id, "acceleration", 1)

@@ -6,7 +6,8 @@
     "children": [
         "88f92e12-7751-49bb-9c15-583f04c013ce",
         "bd814a82-7f09-4137-bc20-b4ab538e7901",
-        "056f3fae-304c-4f38-beb2-406cfd95dfdd"
+        "056f3fae-304c-4f38-beb2-406cfd95dfdd",
+        "91e60762-5593-4597-8283-0e2c840d84a1"
     ],
     "filterType": "GMScript",
     "folderName": "Modifier",

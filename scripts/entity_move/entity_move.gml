@@ -1,4 +1,4 @@
-///entity_move(entity, values [,previous])
+///entity_move(entity, [x, y])
 
 var coord = argument[1]
 var xx = coord[0]

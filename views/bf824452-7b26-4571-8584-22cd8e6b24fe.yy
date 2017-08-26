@@ -15,7 +15,11 @@
         "49049b67-51df-427b-8633-9a5fda564531",
         "2e0a6c35-89fb-4f39-8ab4-3f8ed6adc575",
         "3ada3954-8d06-48de-b7ee-f475792152af",
-        "9f0ad87b-d02d-48bd-bb0f-2c3cfb5f2d97"
+        "9f0ad87b-d02d-48bd-bb0f-2c3cfb5f2d97",
+        "f7414bee-f4a2-48dd-ab14-5e414a322860",
+        "ba2f1393-b33a-4737-bec7-fea43d166628",
+        "20d7b91a-244c-4f46-983a-bfd763df45f3",
+        "fc9aba10-46b6-4173-a2b9-315e460659f8"
     ],
     "filterType": "GMScript",
     "folderName": "Entity",

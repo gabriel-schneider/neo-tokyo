@@ -16,7 +16,7 @@ mask_crouch = spr_player_crouch
 
 is_moveable = true
 move_priority = 10
-entity_set_state(id, actor_state.normal)
+//entity_set_state(id, actor_state.normal)
 
 //footstep_init()
 footstep_count = 0
@@ -26,3 +26,4 @@ ds_list_add(footstep_list, snd_generic_heels_1, snd_generic_heels_2, snd_generic
 			snd_generic_heels_4, snd_generic_heels_5, snd_generic_heels_6, snd_generic_heels_7,
 			snd_generic_heels_8)
 			
+event_attach(id, "on_hit_ground", "entity_jump", [])

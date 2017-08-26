@@ -18,5 +18,11 @@
 		"end": "buff_roll_end",
 		"duration": 30,
 		"is_unique": true
+	},
+	"crouch": {
+		"start": "mod_crouch_begin",
+		"end": "mod_crouch_end",
+		"duration": -1,
+		"is_unique": true
 	}
 }

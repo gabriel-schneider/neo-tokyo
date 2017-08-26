@@ -3,12 +3,15 @@ event_inherited()
 enum actor_state {
 	normal, 
 	crouch, 
-	jump	
+	jump,
+	void	
 }
 
 is_ghostable = true
 
-state = actor_state.normal
+states = ds_stack_create()
+actor_state_add(id, actor_state.normal)
+//state = actor_state.normal
 
 mask_normal = -1
 mask_crouch = -1
