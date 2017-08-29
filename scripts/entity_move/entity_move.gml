@@ -15,6 +15,10 @@ if (argument_count >= 3)
 	}
 }
 
+if (count > 8) {
+	return false
+}
+
 with (argument[0])
 {
 	if (previous)
