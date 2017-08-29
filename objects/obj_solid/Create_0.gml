@@ -1,0 +1,1 @@
+fs_material = footstep_surface.generic

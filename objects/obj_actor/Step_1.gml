@@ -1,6 +1,7 @@
 event_inherited()
 
 // Apply modifier step event and update duration
+event_fire(id, "before_apply_modifiers")
 for (var i=0; i<ds_list_size(modifiers); i++)
 {
 	var modifier = modifiers[| i]
@@ -25,5 +26,23 @@ for (var i=0; i<ds_list_size(modifiers); i++)
 	if (ds_map_exists(modifier, "step"))
 	{		
 		script_execute(modifier[? "step"], id)
+	}
+}
+
+event_fire(id, "after_apply_modifiers")
+
+if (_hspeed != 0 && on_floor) {
+	var ground_inst = instance_place(x, y + 1, obj_solid) 
+	if (ground_inst) {
+		if (ground_inst.fs_material != actor_footstep_get_surface()) {
+			actor_footstep_set_surface(ground_inst.fs_material)
+		}
+	}
+	fs_counter += abs(_hspeed)
+	var m = fs_steps_per_cycle*image_number*(max_speed/image_speed) 
+	if (fs_counter > m)
+	{
+		fs_counter -= m
+		actor_footstep_execute()		
 	}
 }

@@ -1,7 +1,7 @@
 window_set_caption("FPS: " + string(fps_real))
 
 
-draw_text(32, 32, "Player state: " + entity_get_state_name(obj_player.state_current))
+//draw_text(32, 32, "Player state: " + entity_get_state_name(obj_player.state_current))
 
 
 //var modifiers = obj_player.modifiers

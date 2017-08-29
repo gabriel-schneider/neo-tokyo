@@ -1,1 +1,1 @@
-_vspeed = -5.6
+_vspeed = -jump_force

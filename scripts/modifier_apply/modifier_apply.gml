@@ -11,10 +11,10 @@ var modifiers = (argument0).modifiers
 var new_modifier = ds_map_create()
 ds_map_copy(new_modifier, global.modifier_database[? argument1])
 
-if new_modifier[? "is_unique"]
+if (new_modifier[? "is_unique"])
 {
 	var l = ds_list_size(modifiers)
-	for (var i = 0; i  < ds_list_size(l); i++)
+	for (var i = 0; i < l; i++)
 	{
 		var e = modifiers[| i];
 		if (e[? "name"] == argument1)

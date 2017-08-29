@@ -3,7 +3,6 @@
 _hspeed += (keyboard_check(vk_right) - keyboard_check(vk_left))*acceleration
 _direction = sign(_hspeed)
 
-
 entity_apply_friction(id)
 entity_apply_max_speed(id)
 entity_apply_hspeed(id)

@@ -1,9 +1,9 @@
 modifier_init()
-
+footstep_initialize()
 audio_group_load(ag_generic_footstep)
 audio_group_set_gain(ag_generic_footstep, 0.1, 1)
 
-global.world_gravity = 0.25
+global.world_gravity = 0.3
 
 global.control_move_right	= vk_right
 global.control_move_left	= vk_left
