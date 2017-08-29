@@ -10,5 +10,5 @@ if (fs_index >= ds_list_size(fs_list)) {
 	fs_index = 0
 }
 
-audio_play_sound(fs_list[| fs_index], 1, false)
+audio_play_sound_at(fs_list[| fs_index], x, y, 0, 64, 160, 4, false, 1)
 fs_index ++ 

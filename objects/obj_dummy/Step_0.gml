@@ -1,3 +1,6 @@
 event_inherited()
 
-//_hspeed += acceleration*_direction
+if (moving) {
+	_hspeed += acceleration*_direction	
+}
+

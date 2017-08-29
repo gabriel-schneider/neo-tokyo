@@ -11,8 +11,5 @@ jump_force		= entity_get_base(id, "jump_force")
 
 state_on_floor = false
 
-mask_normal = spr_player
-mask_crouch = spr_player_crouch
-
 is_moveable = true
 move_priority = 10

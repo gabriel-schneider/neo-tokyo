@@ -1,4 +1,5 @@
-
+audio_listener_orientation(0, 0, -1000, 0, 1, 0)
+audio_listener_position(lerp(bbox_left, bbox_right, 0.5), lerp(bbox_top, bbox_bottom, 0.25), 0)
 
 _hspeed += (keyboard_check(vk_right) - keyboard_check(vk_left))*acceleration
 _direction = sign(_hspeed)
@@ -31,7 +32,7 @@ switch (state_current) {
 		if keyboard_check_pressed(vk_down)
 		{
 			var old_mask = mask_index
-			mask_index = spr_player
+			mask_index = spr_msk_player
 			if (!place_meeting(x, y, obj_solid))
 			{				
 				modifier_remove(id, "crouch")

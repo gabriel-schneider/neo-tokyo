@@ -38,11 +38,11 @@ if (_hspeed != 0 && on_floor) {
 			actor_footstep_set_surface(ground_inst.fs_material)
 		}
 	}
-	fs_counter += abs(_hspeed)
-	var m = fs_steps_per_cycle*image_number*(max_speed/image_speed) 
-	if (fs_counter > m)
+	fs_counter += abs(image_index_prev - image_index)//abs(_hspeed)
+	var m = image_number/fs_steps_per_cycle
+	if (fs_counter >= m)
 	{
-		fs_counter -= m
+		fs_counter = 0
 		actor_footstep_execute()		
 	}
 }

@@ -1,3 +1,4 @@
 entity_event_initialize()
-event_attach(id, "on_test", "sum_and_show", [10, 20])
-event_attach(id, "on_test", "sum_and_show", [15, 25])
+
+ambient = audio_play_sound(snd_background, 1, true)
+audio_sound_set_track_position(ambient, irandom(audio_sound_length(snd_background)))
